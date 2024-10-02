@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Booking</title>
+    <link rel="stylesheet" href="Filter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="C:\Users\user\Desktop\interface.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
+        <a href="C:\Users\user\Desktop\interface.html#container2" class="nav-item"><i class="fas fa-info-circle"></i> About Us</a>
+        <a href="C:\Users\user\Desktop\interface.html#contact" class="nav-item"><i class="fas fa-phone"></i> Contact Us</a>
+    </nav>
+    <div class="container">
+        <img src="C:/Users/user/Desktop/websitelogo.png"  alt="Railbook Logo" style="width: auto; height: 100px;margin-left: 100px;margin-top: 2px;">
+        <h2 style="text-align: center;color: aliceblue;font-family: algerian;font-size:50px;margin-top: 0px;">Book Ticket</h2>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="pickup" style="font-size: larger;">From:</label>
+                <select style="font-family: cursive;" id="pickup" name="pickup" required>
+                    <option value="">Select Destination</option>
+                    <option value="Trivandrum">Trivandrum</option>
+                    <option value="Kollam">Kollam</option>
+                    <option value="Pathanamthitta">Pathanamthitta</option>
+                    <option value="Alappuzha">Alappuzha</option>
+                    <option value="Kottayam">Kottayam</option>
+                    <option value="Eranakulam">Eranakulam</option>
+                    <option value="Thrissur">Thrissur</option>
+                    <option value="Palakkad">Palakkad</option>
+                    <option value="Malappuram">Malappuram</option>
+                    <option value="Kozhikode">Kozhikode</option> 
+                    <option value="Kannur">Kannur</option>           
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="destination" style="font-size: larger;">To:</label>
+                <select style="font-family: cursive;" id="destination" name="destination" required>
+                    <option value="">Select Destination</option>
+                    <option value="Trivandrum">Trivandrum</option>
+                    <option value="Kollam">Kollam</option>
+                    <option value="Pathanamthitta">Pathanamthitta</option>
+                    <option value="Alappuzha">Alappuzha</option>
+                    <option value="Kottayam">Kottayam</option>
+                    <option value="Eranakulam">Eranakulam</option>
+                    <option value="Thrissur">Thrissur</option>
+                    <option value="Palakkad">Palakkad</option>
+                    <option value="Malappuram">Malappuram</option>
+                    <option value="Kozhikode">Kozhikode</option> 
+                    <option value="Kannur">Kannur</option>    
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="date" style="font-size: larger;">Date:</label>
+                <input style="font-family: cursive;" type="date" id="date" name="date" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="booking-class" style="font-size: larger;">Booking Class:</label>
+                <select id="booking-class" name="booking-class" required>
+                    <option value="">All Classes</option>
+                    <option value="first-class">General</option>
+                    <option value="economy">Sleeper (SL)</option>
+                    <option value="business">AC First class (1A)</option>
+                    <option value="first-class">Second sitting (2S)</option>
+                    <option value="business">AC 3 Economy (3E)</option>
+                    <option value="first-class">AC Chair Car (CC)</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Search Trains" style="font-size: larger;">
+            </div>
+        </form>
+    </div>
+    <div class="container1">
+        <div class="slideshow-container" style="width: 100%;">
+            <div class="slide" style="background-image: url('.../Desktop/uid/Kerala.jpg');">
+                <div class="slide-content" style="font-size: 90px; position: absolute;top: 50%; left: 30%;font-style: algerian;margin-left: 150px;">Explore the Pradise</div>
+            </div>
+            <div class="slide" style="background-image: url('../Desktop/uid/trivandrum.jpeg');">
+                <div class="slide-content" style="font-size: 100px;font-style: oblique;">Trivandrum</div>
+            </div>
+            <div class="slide" style="background-image: url('../Desktop/uid/kollam2.jpg');">
+                <div class="slide-content" style="font-size: 100px;font-style: oblique;">Kollam</div>
+            </div>
+            <div class="slide" style="background-image: url('../Desktop/uid/pathanamthitta.png');">
+                <div class="slide-content" style="font-size: 100px;font-style: oblique;">Pathanamthitta</div>
+            </div>
+            <div class="slide" style="background-image: url('../Desktop/uid/alappuzha.jpg');">
+                <div class="slide-content" style="font-size: 100px;font-style: oblique;">Aalappuzha</div>
+            </div>
+            <div class="slide" style="background-image: url('../Desktop/uid/kottayam1.webp');">
+                <div class="slide-content" style="font-size: 100px;font-style: oblique;">Kottayam</div>
+            </div>
+            <div class="slide" style="background-image: url('../Desktop/uid/idukki.jpg');">
+                <div class="slide-content" style="font-size: 100px;font-style: oblique;">Idukki</div>
+            </div>
+            <div class="slide" style="background-image: url('../Desktop/uid/eranakulam1.jpg');">
+                <div class="slide-content" style="font-size: 100px;font-style: oblique;">Eranakulam</div>
+            </div>
+            <div class="slide" style="background-image: url('../Desktop/uidproject/thrissur.jpg');">
+                <div class="slide-content" style="font-size: 100px;font-style: oblique;">Thrissur</div>
+            </div>
+            <div class="slide" style="background-image: url('../Desktop/uid/palakkad1.jpg');">
+                <div class="slide-content" style="font-size: 100px;font-style: oblique;">Palakkad</div>
+            </div>
+            <div class="slide" style="background-image: url('../Desktop/uid/malappuram1.jpg');">
+                <div class="slide-content" style="font-size: 100px;font-style: oblique;">Malappuram</div>
+            </div>
+            <div class="slide" style="background-image: url('../Desktop/uidproject/kozhikode.jpg');">
+                <div class="slide-content" style="font-size: 100px;font-style: oblique;">Kozhikode</div>
+            </div>
+            <div class="slide" style="background-image: url('../Desktop/uidproject/wayanad.jpg');">
+                <div class="slide-content" style="font-size: 100px;font-style: oblique;">Wayanad</div>
+            </div>
+            <div class="slide" style="background-image: url('../Desktop/uidproject/kannur.jpg');">
+                <div class="slide-content" style="font-size: 100px;font-style: oblique;">Kannur</div>
+            </div>
+            <div class="slide" style="background-image: url('../Desktop/uidproject/kasargod.jpg');">
+                <div class="slide-content" style="font-size: 100px;font-style: oblique;">Kasargod</div>
+            </div>
+        </div>
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+            <span class="dot" onclick="currentSlide(11)"></span>
+            <span class="dot" onclick="currentSlide(12)"></span>
+            <span class="dot" onclick="currentSlide(13)"></span>
+            <span class="dot" onclick="currentSlide(14)"></span>
+        </div>
+    </div>
+
+    <script>
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+        event.preventDefault();       
+        const pickup = document.getElementById('pickup').value;
+        const destination = document.getElementById('destination').value;
+        const date = document.getElementById('date').value;
+        const bookingClass = document.getElementById('booking-class').value;
+
+        fetchTrainDetails(pickup, destination, date, bookingClass);
+    });
+
+    function fetchTrainDetails(pickup, destination, date, bookingClass) {
+        const trains = [
+        { name: 'RAJADHANI EXPRESS', origin: 'Trivandrum', destination: 'Thrissur', departure: '08:00 AM', arrival: '01:00 PM', seats: 50, fare: '300' },
+        { name: 'KERALA EXPRESS', origin: 'Thrissur', destination: 'Trivandrum', departure: '09:30 AM', arrival: '02:30 PM', seats: 40, fare: '350' },
+        { name: 'JANSHATABDI', origin: 'Eranakulam', destination: 'Trivandrum', departure: '10:00 AM', arrival: '12:30 PM', seats: 60, fare: '200' },
+        { name: 'SABARI EXPRESS', origin: 'Kottayam', destination: 'Trivandrum', departure: '11:50 AM', arrival: '3:00 PM', seats: 60, fare: '300' },
+        { name: 'TRIVANDRUM EXPRESS', origin: 'Eranakulam', destination: 'Trivandrum', departure: '1:00 PM', arrival: '10:00 PM', seats: 60, fare: '350' },
+        { name: 'KANNUR EXPRESS', origin: 'Kollam', destination: 'Kannur', departure: '10:00 AM', arrival: '12:30 PM', seats: 60, fare: '400' },
+        { name: 'JANSHATABDI', origin: 'Eranakulam', destination: 'Trivandrum', departure: '10:00 AM', arrival: '12:30 PM', seats: 60, fare: '200' },
+        { name: 'KERALA EXPRESS', origin: 'Trivandrum', destination: 'Thrissur', departure: '10:00 AM', arrival: '12:30 PM', seats: 60, fare: '300' },
+        { name: 'JANSHATABDI', origin: 'Thrissur', destination: 'Trivandrum', departure: '10:00 AM', arrival: '12:30 PM', seats: 60, fare: '200' },
+        { name: 'RAJARANI EXPRESS', origin: 'Eranakulam', destination: 'Trivandrum', departure: '10:00 AM', arrival: '12:30 PM', seats: 60, fare: '200' },
+        { name: 'RAJARANI EXPRESS',origin: 'Kollam',destination: 'Eranakulam',departure: '10:00 AM',arrival: '12:30 PM',seats: 60,fare: '200' },
+        { name: 'SABARI EXPRESS',origin: 'Pathanamthitta',destination: 'Kottayam',departure: '8:45 AM',arrival: '3:15 PM',seats: 80,fare: '350' },
+        { name: 'ALLEPPEY EXPRESS',origin: 'Thrissur',destination: 'Kozhikode',departure: '9:30 AM',arrival: '5:45 PM',seats: 100,fare: '500' },
+        { name: 'MALABAR EXPRESS',origin: 'Kannur',destination: 'Palakkad',departure: '11:15 AM',arrival: '2:45 PM',seats: 70,fare: '250' },
+        { name: 'KONKAN EXPRESS',origin: 'Malappuram',destination: 'Trivandrum',departure: '12:00 PM',arrival: '6:30 PM',seats: 90,fare: '400' },
+        { name: 'RAJADHANI EXPRESS',origin: 'Kozhikode',destination: 'Trivandrum',departure: '08:00 AM',arrival: '01:00 PM',seats: 50,fare: '300' },
+        { name: 'KERALA EXPRESS',origin: 'Kozhikode',destination: 'Kollam',departure: '09:30 AM',arrival: '02:30 PM', seats: 40,fare: '350' },
+        { name: 'JANSHATABDI',origin: 'Kannur', destination: 'Kottayam',departure: '11:50 AM',arrival: '3:00 PM',seats: 60,fare: '300' },
+        { name: 'TRIVANDRUM EXPRESS',origin: 'Ernakulam',destination: 'Thrissur',departure: '1:00 PM',arrival: '10:00 PM', seats: 60,fare: '350'  },
+        { name: 'KANNUR EXPRESS',origin: 'Kollam',destination: 'Kannur', departure: '10:00 AM',arrival: '12:30 PM',seats: 60,fare: '400' },
+        { name: 'SABARI EXPRESS',origin: 'Kottayam',destination: 'Alappuzha',departure: '8:45 AM',arrival: '10:00',seats: 80,fare: '350' },
+        { name: 'SABARI EXPRESS',origin: 'Kollam',destination: 'Thrissur',departure: '8:45 AM',arrival: '3:15 PM',seats: 80,fare: '350' },
+        { name: 'ALLEPPEY EXPRESS',origin: 'Thrissur',destination: 'Kozhikode',departure: '9:30 AM',arrival: '5:45 PM',seats: 100,fare: '500' },
+        { name: 'MALABAR EXPRESS',origin: 'Palakkad',destination: 'Trivandrum',departure: '11:15 AM',arrival: '2:45 PM',seats: 70,fare: '350' },
+        { name: 'KONKAN EXPRESS',origin: 'Kannur',destination: 'Trivandrum',departure: '12:00 PM',arrival: '6:30 PM',seats: 90,fare: '400' },
+        { name: 'RAJADHANI EXPRESS', origin: 'Trivandrum', destination: 'Alappuzha', departure: '08:80 AM', arrival: '01:00 PM', seats: 50, fare: '300' },
+        { name: 'JANASHATABDI', origin: 'Trivandrum', destination: 'Kottayam', departure: '09:00 AM', arrival: '01:00 PM', seats: 50, fare: '350' },
+        { name: 'RAJADHANI EXPRESS', origin: 'Trivandrum', destination: 'Eranakulam', departure: '08:00 AM', arrival: '01:00 PM', seats: 50, fare: '400' },
+        { name: 'SABARI EXPRESS', origin: 'Trivandrum', destination: 'Palakkad', departure: '10:00 AM', arrival: '01:00 PM', seats: 50, fare: '400' },
+        { name: 'RAJADHANI EXPRESS', origin: 'Trivandrum', destination: 'Malappuram', departure: '08:00 AM', arrival: '03:50 PM', seats: 50, fare: '450' },
+        { name: 'RAJADHANI EXPRESS', origin: 'Trivandrum', destination: 'Kannur', departure: '07:00 AM', arrival: '05:00 PM', seats: 50, fare: '450' },
+        { name: 'MALABAR EXPRESS', origin: 'Trivandrum', destination: 'Kozhikode', departure: '11:00 AM', arrival: '06:00 PM', seats: 50, fare: '500' },
+        ];
+        const filteredTrains = trains.filter(train => {
+            return train.origin === pickup && train.destination === destination;
+        });
+        displayTrainDetailsPopup(filteredTrains);
+    }
+    function displayTrainDetailsPopup(trains) {
+    const popupContent = `  
+        <div class="popup-container">
+            <div class="popup-content">
+                <span class="popup-close" onclick="closePopup()">&times;</span>
+                <h2>Available Trains</h2>
+                <ul>
+                    ${trains.map(train => `
+                        <li class="popup-train">
+                            <p><strong>Train Name:</strong> ${train.name}</p>
+                            <p><strong>Origin:</strong> ${train.origin}</p>
+                            <p><strong>Destination:</strong> ${train.destination}</p>
+                            <p><strong>Departure Time:</strong> ${train.departure}</p>
+                            <p><strong>Arrival Time:</strong> ${train.arrival}</p>
+                            <p><strong>Available Seats:</strong> ${train.seats}</p>
+                            <p><strong>Fare:</strong> ₹${train.fare}</p>
+                            <button onclick="bookNow('${train.name}', '${train.fare}')">Book Now</button>
+                        </li>
+                    `).join('')}
+                </ul>
+            </div>
+        </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', popupContent);
+}
+
+function closePopup() {
+    const popupContainer = document.querySelector('.popup-container'); 
+    if (popupContainer) {
+        popupContainer.remove();
+    }
+}
+function bookNow(trainName, fare) {
+    const encodedFare = encodeURIComponent(fare); 
+    window.location.href = "count.html?trainName=" + encodeURIComponent(trainName) + "&fare=" + encodedFare;
+}
+
+    let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        let slideContents = document.querySelectorAll('.slide-content');
+
+        function showSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+            slideContents[index].style.animation = '';
+                dots[index].classList.remove('active');
+            });
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].classList.add('active');
+            dots[slideIndex - 1].classList.add('active');
+            slideContents[slideIndex - 1].style.animation = 'slideIn 1s forwards';
+            setTimeout(showSlides, 3000);
+        }
+
+        function currentSlide(index) {
+            slideIndex = index + 1;
+            showSlides();
+        }
+
+        showSlides();
+    document.body.appendChild(dotsContainer);
+    </script>
+</body>
+</html>

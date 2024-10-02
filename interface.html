@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railbook - Train Ticket Booking</title>
+    <link rel="stylesheet" href="proj_css.css">
+    <link rel="icon" href="C:/Users/user/Desktop/websitelogo.png">
+</head>
+<body>
+    <h><img src="C:/Users/user/Desktop/websitelogo.png"  alt="Railbook Logo" style="width: auto; height: 80px; vertical-align: middle;"><b> RailBook - Train Ticket Booking</b></h>
+    <nav>
+        <ul>
+            <li><a href="#container2">About</a></li>
+            <li><a href="#container5">Book Tickets</a></li>
+            <li><a href="#contact">Contact US</a></li>
+            <li><a href="platformticket.html">PlatformTickets</a></li>
+        </ul>
+    </nav>
+
+    <div class="container-wrapper">
+        <div class="container1">
+            <div class="slideshow-container" style="width: 100%;">
+                <div class="slide" style="background-image: url('../Desktop/uid/container1.jpg');">
+                    <div class="slide-content" style="font-size: 60px;">Welcome to RailBook</div>
+                </div>
+                <div class="slide" style="background-image: url('../Desktop/uid/train6.jpg');">
+                    <div class="slide-content" style="font-size: 40px;font-style: oblique;">Are you planning a trip to the beautiful state of Kerala, known for its lush greenery, serene backwaters, and vibrant culture?</div>
+                </div>
+                <div class="slide" style="background-image: url('../Desktop/uid/platform123.jpg');">
+                    <div class="slide-content" style="font-size: 30px;font-style: oblique;">Then this is your one-stop destination for hassle-free railway booking experiences. Whether you're a frequent traveler or embarking on a new adventure, RailBook offers seamless booking services tailored to your needs. From comfortable seats to scenic routes of Kerala, we've got you covered!</div>
+                </div>
+            </div>
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br>
+        <div class="containers">
+            <div class="container2" id="container2"> 
+                <section>   
+                    <img src="C:/Users/user/Desktop/imgbx.jpg" alt="Booking" class="container-image">
+                    <h1 style="color: black;">Easy Booking</h1>
+                    <p style="font-size: large;">With our user-friendly online platform or dedicated customer service helpline, booking your railway tickets is just a few clicks or a phone call away.</p>    
+                </section>
+            </div>
+            <div class="container3">   
+                <section>
+                    <img src="C:\Users\user\Desktop\uid\securepayment.jpg" alt="Secure Payment" class="container-image">
+                    <h1 style="color: black;">Secure Payment</h1>
+                    <p style="font-size: large;">Your transactions are safe and secure with us. We offer multiple payment options for your convenience, including net banking, and UPI payments.</p>
+                </section>
+            </div>
+            <div class="container4">
+                <section>
+                    <img src="C:\Users\user\Desktop\uid\24service.avif" alt="24/7 Support" class="container-image">
+                    <h1 style="color: black;">24/7 Support</h1>
+                    <p style="font-size: large;">Our customer support team is available round the clock to assist you with any queries or concerns you may have before, during, or after your journey.</p>
+                </section>
+            </div>
+            <div class="container6">
+                <section>
+                    <img src="C:\Users\user\Desktop\uid\ordermeal.avif" alt="Order Meals" class="container-image">
+                    <h1 style="color: black;">Order Meals with Your Ticket!</h1>
+                    <p style="font-size: large;">Enhance your travel experience with our exclusive Order Meals feature. Elevate your journey from mundane to memorable by savoring delicious meals tailored to your taste, conveniently delivered right to your seat. </p>
+                </section>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br>
+        <div class="container5" id="container5">
+            <section>
+                <img src="C:\Users\user\Desktop\uid\booknow.avif" class="container-image">
+                <h1 style="color: black;">Book Your Tickets Now!</h1>
+                <p style="font-size: large;">Don't wait! Experience the enchanting beauty of Kerala with hassle-free railway ticket booking. Visit our website or call our helpline to book your tickets today!</p>
+                <p style="font-size: large;">Explore Kerala, the God's Own Country, by Rail!</p>
+                <p><center><button onclick="window.location.href = 'Filter.html';">Book Tickets</button></center></p>
+            </section>
+        </div>
+    </div>
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>Contact Us</h2>
+                <p>RailBook is committed to providing you with the best railway booking experience. If you have any questions, feel free to reach out to us through the following channels:</p>
+                <ul>
+                    <li>Email: support@railbook.com</li>
+                    <li>Phone: 1800-123-4567</li>
+                    <li>Address: 123 Railway Street, Kochi, Kerala, India</li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <p>Stay connected with us on social media for the latest updates and offers:</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/RailBook" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.twitter.com/RailBook" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/RailBook" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/company/RailBook" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 RailBook. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlides() {
+            slides.forEach((slide, index) => {
+                slide.style.display = 'none';
+                dots[index].classList.remove('active');
+            });
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = 'block';
+            dots[slideIndex - 1].classList.add('active');
+            setTimeout(showSlides, 3000);
+        }
+
+        function currentSlide(index) {
+            slideIndex = index + 1;
+            showSlides();
+        }
+
+        showSlides();
+    </script>
+</body>
+</html>

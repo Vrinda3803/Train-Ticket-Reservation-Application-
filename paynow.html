@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Page</title>
+<style>
+   body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(236, 240, 240, 0.753);
+    background-image: url(../Desktop/uid/paynow.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+  h4{
+    font-family:cursive;
+    font-size: larger;
+  }
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  .payment-option {
+    margin-bottom: 20px;
+  }
+  .payment-option label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .payment-section {
+    display: none;
+    margin-top: 40px;
+    padding: 20px;
+    border: 2px solid #0a0303;
+    margin-right: 200px;
+    background-color: rgb(231, 241, 243);
+  }
+  .confirm-button {
+    margin-top: 20px;
+    height: 40px;
+    background-color: rgb(237, 81, 9);
+    border: 4px rgb(237, 81, 9);
+  }
+  table{
+    margin-left: 60px;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    background-color: aliceblue;
+    width: 400px;
+    border-radius: 8px;
+    padding: 40px;
+    border: solid black;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),
+                0 5px 12px -2px rgba(0, 0, 0, 0.1),
+                0 18px 36px -6px rgba(0, 0, 0, 0.1);
+                
+}
+
+.container .title{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container form input{
+    display: none;
+}
+
+.container form .category{
+    margin-top: 10px;
+    padding-top: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+}
+
+
+.category label{
+    height: 145px;
+    padding: 20px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+}
+
+#upi:checked ~ .category .upimethod,
+#card:checked ~ .category .cardmethod,
+#netbanking:checked ~ .category .netbankingmethod
+{
+    box-shadow : 0px 0px 0px 1px #6064b6;}
+
+
+#upi:checked ~ .category .upimethod.check,
+#card:checked ~ .category .cardmethod.check,
+#netbanking:checked ~ .category .netbankingmethod.check{
+    display: block;
+}
+
+label .imgName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.imgName span{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 72%;
+    transform: translateY(-72%);
+}
+
+.imgName .imgContainer{
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px;
+    position: absolute;
+    top: 35%;
+    transform: translateY(-35%);
+    
+}
+
+img{
+    width: 50px;
+    height: auto;
+}
+
+.imgContainer img{
+    width: 80px;
+}
+
+.upi img{
+    width: 65px;
+}
+
+.card img{
+    width: 80px;
+}
+
+.netbanking img{
+    width: 50px;
+}
+
+.check{
+    display: none;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+}
+
+.check i{
+    font-size: 18px;
+}
+</style>
+</head>
+<body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="container">
+    <div class="title">
+        <h4>Select a <span style="color: #01020a">Payment</span> method</h4>
+    </div>
+    <form action="#">
+        <div class="category">
+            <label for="upi" class="upimethod" onclick="showPaymentSection('upi-payment')">
+                <div class="imgName">
+                    <div class="imgContainer upi">
+                        <img src="C:\Users\user\Desktop\uid\UPI.jpg" alt="">
+                    </div>
+                    <span class="name">UPI</span>
+                </div>
+                <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+            </label>
+
+            <label for="card" class="cardmethod" onclick="showPaymentSection('card-payment')">
+                <div class="imgName">
+                    <div class="imgContainer card">
+                        <img src="C:\Users\user\Desktop\uid\creditcard.jpg" alt="">
+                    </div>
+                    <span class="name">Card</span>
+                </div>
+                <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+            </label>
+
+            <label for="netbanking" class="netbankingmethod" onclick="showPaymentSection('netbanking')">
+                <div class="imgName">
+                    <div class="imgContainer netbanking">
+                        <img src="C:\Users\user\Desktop\uid\net-banking.jpg" alt="">
+                    </div>
+                    <span class="name">Netbanking</span>
+                </div>
+                <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+            </label>
+        </div>
+    </form>
+</div>
+
+<div id="upi-payment" class="payment-section">
+    <table>
+        <tr><th colspan="2"><h3>UPI Payment Section</h3></th></tr>
+        <tr><td><label for="upi-id">UPI ID:</label></td> <td><input type="text" id="upi-id" required><br></td></tr>
+        <tr><td colspan="2"><button class="confirm-button" onclick="redirectToAnotherPage()">Confirm Payment</button></td></tr>
+    </table>
+</div>
+
+<div id="card-payment" class="payment-section">
+    <table>
+        <tr><th colspan="2"><h3>Debit/Credit Card Section</h3></th></tr>
+        <tr><td><label for="card-number">Card Number:</label></td> <td><input type="text" id="card-number" required><br></td></tr>
+        <tr><td><label for="expiry-date">Expiry Date:</label></td> <td><input type="text" id="expiry-date" required><br></td></tr>
+        <tr><td><label for="cvv">CVV:</label></td> <td><input type="text" id="cvv" required><br></td></tr>
+        <tr><td colspan="2"><button class="confirm-button" onclick="redirectToAnotherPage()">Confirm Payment</button></td></tr>
+    </table>
+</div>
+
+<div id="netbanking" class="payment-section">
+    <table>
+        <tr><th colspan="2"><h3>Net Banking Section</h3></th></tr>
+        <tr><td><label for="bank-name">Bank Name:</label></td> <td><input type="text" id="bank-name" required><br></td></tr>
+        <tr><td><label for="username">Username:</label></td> <td><input type="text" id="username" required><br></td></tr>
+        <tr><td><label for="password">Password:</label></td> <td><input type="password" id="password" required><br></td></tr>
+        <tr><td colspan="2"><button class="confirm-button" onclick="redirectToAnotherPage()">Confirm Payment</button></td></tr>
+    </table>
+</div>
+
+<script>
+  function showPaymentSection(sectionId) {
+    var sections = document.querySelectorAll('.payment-section');
+    sections.forEach(function(section) {
+      if (section.id === sectionId) {
+        section.style.display = 'block';
+      } else {
+        section.style.display = 'none';
+      }
+    });
+  }
+  
+  function redirectToAnotherPage() {
+    // Implement the redirection logic here
+    window.location.href = "paymentsucess.html";
+  }
+</script>
+</body>
+</html>

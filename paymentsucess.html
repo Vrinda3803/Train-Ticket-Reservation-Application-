@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Page</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #4edc3b;
+    background-image: url(../Desktop/uid/paymentsuccess.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .container {
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+  }
+ .otp-content{
+    margin-right: 20px;
+
+ }
+ .otp-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #0e0606;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #4af347;
+  }
+  .confirm-button {
+    background-color: #085513;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .success-message {
+    display: none;
+    margin-top: 20px;
+    color: #28a745;
+    font-size: 24px;
+  }
+  .success-icon {
+    display: none;
+    margin-top: 20px;
+    font-size: 48px;
+    color: #28a745;
+    animation: scaleUp 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes scaleUp {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="box">
+        <div class="otp-content">
+            <input type="text" id="otp" class="otp-input" placeholder="Enter OTP" maxlength="6" minlength="6" required>
+            <button class="confirm-button" onclick="verifyOTP()">Confirm</button>
+        </div>
+    </div>
+  <div class="success-message" id="success-message">
+    Payment successful
+  </div>
+  
+  <div class="success-icon" id="success-icon">
+    &#10004;
+  </div>
+</div>
+
+<audio id="success-sound">
+  <source src="payment_success.mp3" type="audio/wav">
+</audio>
+
+<script>
+  function confirmPayment() {
+    setTimeout(function() {
+      document.querySelector('.otp-content').style.display = 'none';
+      document.getElementById('success-icon').style.display = 'block';
+      playSuccessSound(); // Call function to play success sound
+      document.getElementById('success-message').style.display = 'block'; // Display success message after the animation
+    }, 1000);
+    setTimeout(function() {
+        window.location.href = 'ticket.html'; 
+      }, 2000)
+  }
+  
+  function playSuccessSound() {
+    var audio = document.getElementById('success-sound');
+    audio.play();
+  }
+
+  function verifyOTP() {
+    var otp = document.getElementById('otp').value;
+    if (otp.length === 6) {
+      // OTP length is 6, so confirm the payment
+      confirmPayment();
+    } else {
+      // OTP length is not 6, show alert
+      alert("Please enter a valid 6-digit OTP.");
+    }
+}
+</script>
+</body>
+</html>

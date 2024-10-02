@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Railway Ticket Booking</title>
+    <link rel="stylesheet" href="mealhome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="C:\Users\user\Desktop\interface.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
+        <a href="C:\Users\user\Desktop\interface.html#container2" class="nav-item"><i class="fas fa-info-circle"></i> About Us</a>
+        <a href="C:\Users\user\Desktop\interface.html#contact" class="nav-item"><i class="fas fa-phone"></i> Contact Us</a>
+    </nav>
+    <img src="C:/Users/user/Desktop/websitelogo.png"  alt="Railbook Logo" style="width: auto; height: 140px;margin-left: 270px;margin-bottom: 0px;"><br>
+    <h1 class="head" style="position: absolute; top: 20px;color:aliceblue;left:460px;font-family: algerian;margin-top: 60px;font-size: 50px;">RailBook Food Reservation</h1>
+    <div class="food-container">
+        <div class="food-item">
+            <input type="checkbox" id="dessert1" name="dessert1">
+            <img src="C:\Users\user\Desktop\uid\choclatebar.jpeg" alt="Chocolate Bar">
+            <div><b>CHOCOLATE BAR</b></div>
+            <div>₹50</div>
+        </div>
+        <div class="food-item">
+            <input type="checkbox" id="dessert4" name="dessert4">
+            <img src="C:\Users\user\Desktop\uid\freshjuice.avif" alt="Fresh Juice">
+            <div><b>FRESH JUICE</b></div>
+            <div>₹60</div>
+        </div>
+        <div class="food-item">
+            <input type="checkbox" id="dessert3" name="dessert3">
+            <img src="C:\Users\user\Desktop\uid\cheesesandwich.jpg" alt="Cheese Sandwich">
+            <div><b>CHEESE SANDWICH</b></div>
+            <div>₹80</div>
+        </div>
+        <div class="food-item">
+            <input type="checkbox" id="dessert2" name="dessert2">
+            <img src="C:\Users\user\Desktop\uid\dryfruits.jpeg" alt="Roasted Dry Fruits">
+            <div><b>ROASTED DRY FRUITS (Cashew, Almonds, Pistachio)</b></div>
+            <div>₹100</div>
+        </div>
+        <div class="food-item">
+            <input type="checkbox" id="meal2" name="meal2">
+            <img src="C:\Users\user\Desktop\uid\vegbiri.jpeg" alt="Veg Deluxe Biryani">
+            <div><b>VEG DELUXE BIRIYANI</b></div>
+            <div>₹120</div>
+        </div>
+        <div class="food-item">
+            <input type="checkbox" id="meal1" name="meal1">
+            <img src="C:\Users\user\Desktop\uid\nonvegthali.jpeg" alt="Chicken Biryani">
+            <div><b>CHICKEN BIRIYANI</b></div>
+            <div>₹150</div>
+        </div>
+        <div class="food-item">
+            <input type="checkbox" id="meal5" name="meal5">
+            <img src="C:\Users\user\Desktop\uid\vedmediumthali.avif" alt="Veg Medium Thali">
+            <div><b>VEG MEDIUM THALI</b></div>
+            <div>₹150</div>
+        </div>
+        <div class="food-item">
+            <input type="checkbox" id="meal3" name="meal3">
+            <img src="C:\Users\user\Desktop\uid\shawarma.avif" alt="Shawarma">
+            <div><b>SHAWARMA</b></div>
+            <div>₹150</div>
+        </div>
+        <div class="food-item">
+            <input type="checkbox" id="meal4" name="meal4">
+            <img src="C:\Users\user\Pictures\Palada-Payasam.webp" alt="Mixed Fried Rice">
+            <div><b>PALADA PAYASAM</b></div>
+            <div>₹170</div>
+        </div>
+        <div class="food-item">
+            <input type="checkbox" id="meal6" name="meal6">
+            <img src="C:\Users\user\Desktop\uid\vegthali.jpeg" alt="Non Veg Deluxe Thali">
+            <div><b>NON VEG DELUXE THALI</b></div>
+            <div>₹200</div>
+        </div>
+        <div class="food-item">
+            <input type="checkbox" id="meal4" name="meal4">
+            <img src="C:\Users\user\Desktop\uid\mixedfri.jpeg" alt="Mixed Fried Rice">
+            <div><b>MIXED FRIEDRICE</b></div>
+            <div>₹250</div>
+        </div>
+        <div class="food-item">
+            <input type="checkbox" id="meal4" name="meal4">
+            <img src="C:\Users\user\Pictures\GheeRoast.webp" alt="Mixed Fried Rice">
+            <div><b>GHEE ROAST</b></div>
+            <div>₹250</div>
+        </div>
+        <div class="food-item">
+            <input type="checkbox" id="meal4" name="meal4">
+            <img src="C:\Users\user\Pictures\fishfry.webp" alt="Mixed Fried Rice">
+            <div><b>FISH FRY</b></div>
+            <div>₹280</div>
+        </div>
+        <div class="food-item">
+            <input type="checkbox" id="meal4" name="meal4">
+            <img src="C:\Users\user\Pictures\porotta.png" alt="Mixed Fried Rice">
+            <div><b>POROTTA-BEEFCURRY</b></div>
+            <div>₹300</div> 
+        </div>
+    </div>
+
+    <div class="orderbutton">
+        <button class="order-button" onclick="orderOpen()" style="background-color: darkgoldenrod;">Order Now</button>
+    </div>
+
+    <div class="form-popup" id="avi">
+        <div class="popup">
+            <h2>Selected Meals</h2>
+            <ul id="selectedMeals"></ul>
+            <h3>Total Food Price: ₹<span id="totalFoodPrice">0</span></h3>
+            <button class="pay-now-button" type="button" onclick="confirmOrder()">Confirm Order</button>
+            <button class="pay-now-button" type="button" onclick="orderClose()">Close</button>
+        </div>
+    </div>
+
+    <div id="confirmationPopup" class="form-popup">
+        <div class="popup">
+            <h2>Confirmation</h2>
+            <p>Total Train Fare: ₹<span id="trainFare"></span></p>
+            <p>Total Food Cost: ₹<span id="totalFoodCost"></span></p>
+            <p>Total Amount: ₹<span id="totalAmount"></span></p>
+            <div class="buttoncontainer">
+            <button class="pay-now-button" onclick="payNow()">Pay Now</button>
+            <button class="pay-now-button" onclick="orderClose()">Cancel</button>
+        </div>
+        </div>
+    </div>
+
+    <script>
+       
+        let selectedMeals = [];
+        let ticketFare = 0;
+        let totalFoodCost = 0;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            ticketFare = parseFloat(urlParams.get('fare')) || 0;
+            document.getElementById('trainFare').textContent = ticketFare.toFixed(2);
+        });
+
+        function orderOpen() {
+            selectedMeals = [];
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    const item = checkbox.parentNode.querySelector('div').textContent;
+                    const price = parseFloat(checkbox.parentNode.querySelectorAll('div')[1].textContent.replace('₹', ''));
+                    selectedMeals.push({ meal: item, price: price });
+                }
+            });
+            totalFoodCost = selectedMeals.reduce((total, meal) => total + meal.price, 0);
+            updateSelectedMeals();
+            document.getElementById("avi").style.display = "flex";
+        }
+
+        function updateSelectedMeals() {
+            const selectedMealsList = document.getElementById('selectedMeals');
+            selectedMealsList.innerHTML = '';
+            selectedMeals.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item.meal + " - ₹" + item.price.toFixed(2);
+                selectedMealsList.appendChild(li);
+            });
+            document.getElementById('totalFoodPrice').textContent = totalFoodCost.toFixed(2);
+        }
+
+        function confirmOrder() {
+            const totalAmount = ticketFare + totalFoodCost;
+            document.getElementById('trainFare').textContent = ticketFare.toFixed(2);
+            document.getElementById('totalFoodCost').textContent = totalFoodCost.toFixed(2);
+            document.getElementById('totalAmount').textContent = totalAmount.toFixed(2);
+            document.getElementById('confirmationPopup').style.display = 'block';
+        }
+
+        function orderClose() {
+            document.getElementById('avi').style.display = 'none';
+            document.getElementById('confirmationPopup').style.display = 'none';
+        }
+
+        function payNow() {
+            window.location.href = "C:\\Users\\user\\Desktop\\paynow.html";
+        }
+    </script>
+</body>
+</html>
